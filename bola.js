@@ -14,7 +14,7 @@ class Bola {
     
     show(){
       noStroke();
-      fill('yellow');
+      fill('red');
       rect(this.pos.x, this.pos.y, this.size.w, this.size.h);
     }
   }
