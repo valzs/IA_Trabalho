@@ -4,7 +4,7 @@ const player2 = new Player();
 const bola = new Bola();
 
 function setup() {
-  createCanvas(500, 400);
+  createCanvas(innerWidth, innerHeight);
   resetGame();
 }
 
