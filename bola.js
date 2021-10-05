@@ -1,7 +1,7 @@
 class Bola {
     constructor(){
       this.pos = {x:0, y:0};
-      this.size = {w:10, h:10};
+      this.size = {w:15, h:10};
       this.direcao = 1;
       this.direcaoVertical = 1; 
       this.deslocamento = 1;
