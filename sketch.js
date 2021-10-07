@@ -35,8 +35,8 @@ function verificaPontuacao(){
 function mostrarPontuacao() {
   fill('pink');
   textSize(48);
-  text(player1.pontuacao,190,50);
-  text(player2.pontuacao,284,50);
+  text(player1.pontuacao, (width / 2) / 2,50);
+  text(player2.pontuacao,(width / 2) + ((width / 2) / 2),50);
 }
 
 function teveColisaoObjetos(obj1, obj2) {
