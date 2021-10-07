@@ -15,6 +15,6 @@ class Bola {
     show(){
       noStroke();
       fill('red');
-      circle(this.pos.x, this.pos.y, this.size.w, this.size.h);
+      circle(this.pos.x, this.pos.y, this.size.w);
     }
   }
