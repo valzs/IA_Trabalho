@@ -1,10 +1,8 @@
 class Player {
     constructor() {
       this.pos = {x:0, y:0};
-      this.size = {w:10, h:100};
+      this.size = {w:10, h:50};
       this.pontuacao = 0;
-      this.nome= 'Pyong';
-      this.nome2='',
       this.controller = 'cpu';
       this.direcao = 1;
     }
