@@ -4,7 +4,7 @@ const player2 = new Player();
 const bola = new Bola();
 
 function setup() {
-  createCanvas(innerWidth, innerHeight);
+  createCanvas(windowWidth, windowHeight);
   resetGame();
 }
 
@@ -13,8 +13,7 @@ function resetGame(){
   player2.pos.x = width - 20;
   player1.pos.y = 180;
   player2.pos.y = 180;
-  // player2.size.h = 500;
-  bola.pos.x = (bola.direcao === 1) ? 40 : 400;
+  bola.pos.x = (bola.direcao === 1) ? (player1.pos.x + player1.size.w) : player2.pos.x;
   bola.pos.y = 200;
   bola.deslocamento = 3;
 }
@@ -35,8 +34,8 @@ function verificaPontuacao(){
 function mostrarPontuacao() {
   fill('pink');
   textSize(48);
-  text(player1.pontuacao,190,50);
-  text(player2.pontuacao,284,50);
+  text(player1.pontuacao, (width / 2) / 2,50);
+  text(player2.pontuacao,(width / 2) + ((width / 2) / 2),50);
 }
 
 function teveColisaoObjetos(obj1, obj2) {
