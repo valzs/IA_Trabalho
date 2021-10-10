@@ -38,6 +38,13 @@ function mostrarPontuacao() {
   text(player2.pontuacao,(width / 2) + ((width / 2) / 2),50);
 }
 
+function mostrarNome() {
+  fill('pink');
+  textSize(48);
+  text(player1.nome, (width / 2) / 3,50);
+  text(player2.nome,(width / 2) + ((width / 2) / 3,50),50);
+}
+
 function teveColisaoObjetos(obj1, obj2) {
   if(
       (
@@ -101,4 +108,5 @@ function draw() {
   bola.show();
   
   mostrarPontuacao();
+  mostrarNome();
 }

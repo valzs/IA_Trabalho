@@ -4,6 +4,7 @@ class Player {
       this.size = {w:10, h:50};
       this.pontuacao = 0;
       this.controller = 'cpu';
+      this.nome = 'teste';
       this.direcao = 1;
     }
     
