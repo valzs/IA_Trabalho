@@ -2,6 +2,7 @@ const player1 = new Player();
 player1.controller = 'mouse';
 const player2 = new Player();
 const bola = new Bola();
+//fundo img = 
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -39,7 +40,7 @@ function mostrarPontuacao() {
 }
 
 function mostrarNome() {
-  fill('pink');
+  fill('green');
   textSize(48);
   text(player1.nome, (width / 2) / 3,50);
   text(player2.nome,(width / 2) + ((width / 2) / 3,50),50);
@@ -84,8 +85,22 @@ function verificaColisao(){
   }
 }
 
+//criando a imagem
+let img;
+
+function preload() {
+  img = loadImage('fundo.jpg');
+}
+
+
+//O que a função draw faz é renderizar os elementos na tela, 
+//basicamente ela executa o código que está dentro dela infinitamente 
+//e uma quantidade específica de vezes, até que haja uma instrução que faça o programa parar.
+
 function draw() {
-  background("black");
+  
+  //pode usar cores também
+  background(img);
 
   //Configurando o meio de campo
   strokeWeight(5);
