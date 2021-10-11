@@ -36,7 +36,7 @@ function mostrarPontuacao() {
   fill('pink');
   textSize(48);
   text(player1.pontuacao, (width / 2) / 2,50);
-  text(player2.pontuacao,(width / 2) + ((width / 2) / 2),50);
+  text(player2.pontuacao,(width / 2) + (width / 4),50);
 }
 
 function mostrarNome() {
