@@ -21,7 +21,6 @@ function resetGame(){
 
 function verificaPontuacao(){
   if(bola.pos.x > width){
-    console.log('player 1 fez o ponto');
     player1.pontuacao++;
     resetGame();
   }
