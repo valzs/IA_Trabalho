@@ -19,6 +19,8 @@ function resetGame(){
   bola.deslocamento = 3;
 }
 
+var name_teste = prompt("Qual é o seu nome?");
+
 function verificaPontuacao(){
   if(bola.pos.x > width){
     player1.pontuacao++;
@@ -38,10 +40,11 @@ function mostrarPontuacao() {
   text(player2.pontuacao,(width / 2) + (width / 4),50);
 }
 
+
 // var capturando = "";
 // function capturar () {
-//     capturando = document.getElementById('valor').value;
-//     document.getElementById('valorDigitado').innerHTML = capturando;
+//   capturando = document.getElementById('valor').value;
+//   document.getElementById('valorDigitado').innerHTML = capturando;
 // }
 
 function mostrarNome() {
