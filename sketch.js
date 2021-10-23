@@ -43,8 +43,8 @@ function mostrarPontuacao() {
 function mostrarNome() {
   fill('green');
   textSize(48);
-  text(player1.nome, (width / 2) / 3,50);
-  text(player2.name,(width / 2) + ((width / 2) / 3,50),50);
+  text(player1.nome, (width / 2) / 1.70,85);
+  text(player2.name,(width / 2) + ((width / 2) / 4.80),85);
 }
 
 function teveColisaoObjetos(obj1, obj2) {
@@ -90,7 +90,7 @@ function verificaColisao(){
 let img;
 
 function preload() {
-  img = loadImage('fundo.png');
+  img = loadImage('fundo.jpg');
 }
 
 
