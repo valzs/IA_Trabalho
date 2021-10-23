@@ -38,11 +38,11 @@ function mostrarPontuacao() {
   text(player2.pontuacao,(width / 2) + (width / 4),50);
 }
 
-var capturando = "";
-function capturar () {
-    capturando = document.getElementById('valor').value;
-    document.getElementById('valorDigitado').innerHTML = capturando;
-}
+// var capturando = "";
+// function capturar () {
+//     capturando = document.getElementById('valor').value;
+//     document.getElementById('valorDigitado').innerHTML = capturando;
+// }
 
 function mostrarNome() {
   fill('green');
