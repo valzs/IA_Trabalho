@@ -1,10 +1,13 @@
+// Player 2 é a IA
+
 class Player {
     constructor() {
       this.pos = {x:0, y:0};
-      this.size = {w:10, h:50};
+      this.size = {w:10, h:100};
       this.pontuacao = 0;
       this.controller = 'cpu';
       this.nome = 'Pyong';
+      this.name = '';
       this.direcao = 1;
     }
     

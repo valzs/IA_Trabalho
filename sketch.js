@@ -33,17 +33,23 @@ function verificaPontuacao(){
 }
 
 function mostrarPontuacao() {
-  fill('pink');
+  fill('black');
   textSize(48);
   text(player1.pontuacao, (width / 2) / 2,50);
   text(player2.pontuacao,(width / 2) + (width / 4),50);
+}
+
+var capturando = "";
+function capturar () {
+    capturando = document.getElementById('valor').value;
+    document.getElementById('valorDigitado').innerHTML = capturando;
 }
 
 function mostrarNome() {
   fill('green');
   textSize(48);
   text(player1.nome, (width / 2) / 3,50);
-  text(player2.nome,(width / 2) + ((width / 2) / 3,50),50);
+  text(player2.name,(width / 2) + ((width / 2) / 3,50),50);
 }
 
 function teveColisaoObjetos(obj1, obj2) {
@@ -89,7 +95,7 @@ function verificaColisao(){
 let img;
 
 function preload() {
-  img = loadImage('fundo.jpg');
+  img = loadImage('fundo.png');
 }
 
 
@@ -98,7 +104,7 @@ function preload() {
 //e uma quantidade específica de vezes, até que haja uma instrução que faça o programa parar.
 
 function draw() {
-  
+
   //pode usar cores também
   background(img);
 
