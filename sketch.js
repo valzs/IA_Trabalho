@@ -17,11 +17,6 @@ function setup() {
   resetGame();
 }
 
-function pointReset(){
-  player1.pontuacao = 0;
-  player2.pontuacao = 0;
-}
-
 function resetGame(){
   player1.pos.x = 10;
   player2.pos.x = width - 20;
@@ -63,10 +58,6 @@ function verificaPontuacao(){
     aumentaDificuldade();
     resetGame()
   }
-
-  if( player1.pontuacao == 30 || player2.pontuacao == 30){
-    pointReset();
-  }
 }
 
 function mostrarPontuacao() {
@@ -81,17 +72,17 @@ function mostrarPontuacao() {
 function aumentaDificuldade(){
 
   if (player1.pontuacao >= player2.pontuacao + 20){
-    bola.deslocamento = 18;
-  } else if (player1.pontuacao >= player2.pontuacao + 15){
     bola.deslocamento = 15;
+  } else if (player1.pontuacao >= player2.pontuacao + 15){
+    bola.deslocamento = 12.5;
   } else if (player1.pontuacao >= player2.pontuacao + 10){
-    bola.deslocamento = 12;
+    bola.deslocamento = 10;
   } else if (player1.pontuacao >= player2.pontuacao + 5){
-    bola.deslocamento = 9;
+    bola.deslocamento = 7.5;
   } else if (player1.pontuacao >= player2.pontuacao){
-    bola.deslocamento = 6;
+    bola.deslocamento = 5;
   } else {
-    bola.deslocamento = 3;
+    bola.deslocamento = 2.5;
   }
 }
 
