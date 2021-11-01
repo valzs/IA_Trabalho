@@ -4,7 +4,7 @@ class Bola {
       this.size = {w:35, h:50};
       this.direcao = 1;
       this.direcaoVertical = 1; 
-      this.deslocamento = 2.5;
+      this.deslocamento = 3;
     }
     
     update(){
