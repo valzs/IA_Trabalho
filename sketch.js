@@ -63,7 +63,7 @@ function verificaPontuacao(){
 function mostrarPontuacao() {
   fill('black');
   textSize(48);
-  //text(player1.pontuacao, (width / 2) / 2,50);
+  text(player1.pontuacao, (width / 2) / 2,50);
   text(player2.pontuacao,(width / 2) + (width / 4),50);
 }
 
