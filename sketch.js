@@ -5,9 +5,9 @@ const bola = new Bola();
 
 //variáveis
 
-var hh = 0;
 var mm = 0;
 var ss = 0;
+var mi = 0;
 
 var tempo = 1000;//Quantos milésimos valem 1 segundo?
 var cron;
@@ -24,26 +24,25 @@ function resetGame(){
   player2.pos.y = 180;
   bola.pos.x = (bola.direcao === 1) ? (player1.pos.x + player1.size.w) : player2.pos.x;
   bola.pos.y = 200;
-  cron = setInterval(() => { timer(); }, tempo);
+  cron = setInterval(() => { mostrarTimer(); }, tempo);
 }
 
-function timer() {
-  ss++; //Incrementa +1 na variável ss
+function mostrarTimer() {
+  mi++; 
+  if (mi == 59) { 
+      mi = 0; 
+      ss++; 
 
-  if (ss == 59) { //Verifica se deu 59 segundos
-      ss = 0; //Volta os segundos para 0
-      mm++; //Adiciona +1 na variável mm
-
-      if (mm == 59) { //Verifica se deu 59 minutos
-          mm = 0;//Volta os minutos para 0
-          hh++;//Adiciona +1 na variável hora
+      if (ss == 59) { 
+          ss = 0;
+          mm++;
       }
   }
 
-  var format = (hh < 10 ? '0' + hh : hh) + ':' + (mm < 10 ? '0' + mm : mm) + ':' + (ss < 10 ? '0' + ss : ss);
+  var format = (mm < 10 ? '0' + mm : mm) + ':' + (ss < 10 ? '0' + ss : ss);
   fill('black');
-  textSize(48);
-  text(format, (width / 2) / 2,50);
+  textSize(70);
+  text(format, (width / 2) / 1.07,85);
   return format;
 }
 
@@ -175,5 +174,5 @@ function draw() {
   
   mostrarPontuacao();
   mostrarNome();
-  timer();
+  mostrarTimer();
 }
