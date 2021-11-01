@@ -1,6 +1,6 @@
 // Player 2 é a IA
 
-var name_teste = prompt("Qual é o seu nome?");
+var name_teste = prompt("Seja bem-vindo ao Pingo Pongo! Qual é o seu nome?");
 
 class Player {
     constructor() {

@@ -9,13 +9,15 @@ var mm = 0;
 var ss = 0;
 var mi = 0;
 
-var tempo = 1000;//Quantos milésimos valem 1 segundo?
+var tempo = 1000;
 var cron;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
   resetGame();
 }
+
+// Iniciando o jogo
 
 function resetGame(){
   player1.pos.x = 10;
@@ -26,6 +28,8 @@ function resetGame(){
   bola.pos.y = 200;
   cron = setInterval(() => { mostrarTimer(); }, tempo);
 }
+
+//Cronômetro
 
 function mostrarTimer() {
   mi++; 
@@ -40,6 +44,7 @@ function mostrarTimer() {
   }
 
   var format = (mm < 10 ? '0' + mm : mm) + ':' + (ss < 10 ? '0' + ss : ss);
+
   fill('black');
   textSize(70);
   text(format, (width / 2) / 1.07,85);
@@ -137,7 +142,7 @@ function verificaColisao(){
 let img;
 
 function preload() {
-  img = loadImage('fundo.jpg');
+  img = loadImage('background.jpg');
 }
 
 
