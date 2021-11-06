@@ -30,7 +30,7 @@ class Player {
     
     show() {
       noStroke();
-      fill('blue');
+      fill('red');
       rect(this.pos.x, this.pos.y, this.size.w, this.size.h);
     }
   }

@@ -47,7 +47,7 @@ function mostrarTimer() {
 
   fill('black');
   textSize(70);
-  text(format, (width / 2) / 1.07,85);
+  text(format, (width / 2) / 1.1,100);
   return format;
 }
 
@@ -68,8 +68,8 @@ function verificaPontuacao(){
 function mostrarPontuacao() {
   fill('black');
   textSize(48);
-  text(player1.pontuacao, (width / 2) / 2,50);
-  text(player2.pontuacao,(width / 2) + (width / 4),50);
+  text(player1.pontuacao, (width / 2) / 2.3,90);
+  text(player2.pontuacao,(width / 2) + (width / 3.8),90);
 }
 
 
