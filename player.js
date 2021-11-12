@@ -1,7 +1,5 @@
 // Player 2 é a IA
-
 var name_teste = prompt("Seja bem-vindo ao Pingo Pongo! Qual é o seu nome?");
-
 class Player {
     constructor() {
       this.pos = {x:0, y:0};

@@ -29,6 +29,17 @@ function resetGame(){
   cron = setInterval(() => { mostrarTimer(); }, tempo);
 }
 
+function finalizaJogo(){
+  if (player1.pontuacao >= 30 || player2.pontuacao >= 30 || mm == 3){
+    player1.pontuacao = 0;
+    player2.pontuacao = 0;
+    mm = 0;
+    ss = 0;
+    mi = 0;
+  }
+}
+
+
 //Cronômetro
 
 function mostrarTimer() {
@@ -55,12 +66,14 @@ function verificaPontuacao(){
   if(bola.pos.x > width){
     player1.pontuacao++;
     aumentaDificuldade();
+    finalizaJogo();
     resetGame();
   }
   
   if(bola.pos.x + bola.size.w < 0){
     player2.pontuacao++;
     aumentaDificuldade();
+    finalizaJogo()
     resetGame()
   }
 }
