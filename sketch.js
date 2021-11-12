@@ -30,12 +30,20 @@ function resetGame(){
 }
 
 function finalizaJogo(){
-  if (player1.pontuacao >= 30 || player2.pontuacao >= 30 || mm == 3){
+  if (player1.pontuacao >= 2 || player2.pontuacao >= 2 || mm == 3){
     player1.pontuacao = 0;
     player2.pontuacao = 0;
     mm = 0;
     ss = 0;
     mi = 0;
+
+    
+    if (player1.pontuacao > player2.pontuacao){
+      alert("O Jogador " + player1.nome + " Ganhou");
+    }
+    if(player2.pontuacao > player1.pontuacao){
+      alert("O Jogador" + player2.nome + " Ganhou");
+    }  
   }
 }
 
@@ -88,10 +96,7 @@ function mostrarPontuacao() {
 
 
 function aumentaDificuldade(){
-
-  if (player1.pontuacao >= player2.pontuacao + 20){
-    bola.deslocamento = 15;
-  } else if (player1.pontuacao >= player2.pontuacao + 15){
+  if (player1.pontuacao >= player2.pontuacao + 15){
     bola.deslocamento = 12.5;
   } else if (player1.pontuacao >= player2.pontuacao + 10){
     bola.deslocamento = 10;
