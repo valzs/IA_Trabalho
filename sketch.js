@@ -30,14 +30,7 @@ function resetGame(){
 }
 
 function finalizaJogo(){
-  if (player1.pontuacao >= 4 || player2.pontuacao >= 4 || mm == 3){
-
-    if (player1.pontuacao > player2.pontuacao){
-      alert("O Jogador " + player1.nome + " Ganhou");
-    }else{
-      alert("O Jogador " + player2.nome + " Ganhou");
-    }  
-
+  if (player1.pontuacao >= 5 || player2.pontuacao >= 5 || mm == 3){
     player1.pontuacao = 0;
     player2.pontuacao = 0;
     mm = 0;
