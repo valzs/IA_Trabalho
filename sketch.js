@@ -30,20 +30,20 @@ function resetGame(){
 }
 
 function finalizaJogo(){
-  if (player1.pontuacao >= 2 || player2.pontuacao >= 2 || mm == 3){
+  if (player1.pontuacao >= 4 || player2.pontuacao >= 4 || mm == 3){
+
+    if (player1.pontuacao > player2.pontuacao){
+      alert("O Jogador " + player1.nome + " Ganhou");
+    }else{
+      alert("O Jogador " + player2.nome + " Ganhou");
+    }  
+
     player1.pontuacao = 0;
     player2.pontuacao = 0;
     mm = 0;
     ss = 0;
-    mi = 0;
-
+    mi = 0; 
     
-    if (player1.pontuacao > player2.pontuacao){
-      alert("O Jogador " + player1.nome + " Ganhou");
-    }
-    if(player2.pontuacao > player1.pontuacao){
-      alert("O Jogador" + player2.nome + " Ganhou");
-    }  
   }
 }
 
