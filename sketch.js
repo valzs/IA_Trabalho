@@ -111,7 +111,7 @@ function aumentaDificuldade(){
 
 
 function mostrarNome() {
-  fill('green');
+  fill('black');
   textSize(48);
   text(player1.nome, (width / 2) / 1.70,85);
   text(player2.name,(width / 2) + ((width / 2) / 4.80),85);
